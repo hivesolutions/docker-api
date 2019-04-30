@@ -1,2 +1,3 @@
-# docker_api
-Python based API client for Docker
+# Docker API
+
+Python based API client for Docker.
