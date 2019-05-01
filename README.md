@@ -4,7 +4,7 @@ Python based API client for Docker.
 
 ## Reference
 
-The Docker API projects takes most of its reference implementation from the [Official Docker API Documentation](https://docs.docker.com/engine/api/).
+The Docker API projects takes most of its reference implementation from the [Official Docker API Documentation](https://docs.docker.com/engine/api/latest).
 
 ## License
 
