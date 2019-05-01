@@ -40,11 +40,11 @@ __license__ = "Apache License, Version 2.0"
 class ContainerAPI(object):
 
     def list_containers(self, *args, **kwargs):
-        url = self.base_url + "containers"
+        url = self.base_url + "containers/json"
         contents = self.get(url, **kwargs)
         return contents
 
-    def restart_container(self, id):
+    def restart_container(self, id, timeout = 5):
         url = self.base_url + "containers/%s/restart" % id
-        contents = self.post(url)
+        contents = self.post(url, t = timeout)
         return contents
