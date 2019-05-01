@@ -44,7 +44,7 @@ class ContainerAPI(object):
         contents = self.get(url, **kwargs)
         return contents
 
-    def restart_service(self, id):
+    def restart_container(self, id):
         url = self.base_url + "containers/%s/restart" % id
         contents = self.post(url)
         return contents
