@@ -49,7 +49,7 @@ class DockerApp(appier.WebApp):
 
     @appier.route("/", "GET")
     def index(self):
-        return self.stacks()
+        return self.containers()
 
     @appier.route("/containers", "GET")
     def containers(self):
