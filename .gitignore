@@ -7,4 +7,4 @@ session.shelve*
 
 /dist
 /build
-/src/docker_api.egg-info
+/src/docker-api.egg-info
