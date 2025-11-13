@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Hive Docker API
-# Copyright (c) 2008-2020 Hive Solutions Lda.
+# Copyright (c) 2008-2025 Hive Solutions Lda.
 #
 # This file is part of Hive Docker API.
 #
@@ -19,16 +19,7 @@
 # You should have received a copy of the Apache License along with
 # Hive Docker API. If not, see <http://www.apache.org/licenses/>.
 
-__version__ = "1.0.0"
-""" The version of the module """
-
-__revision__ = "$LastChangedRevision$"
-""" The revision number of the module """
-
-__date__ = "$LastChangedDate$"
-""" The last change date of the module """
-
-__copyright__ = "Copyright (c) 2008-2020 Hive Solutions Lda."
+__copyright__ = "Copyright (c) 2008-2025 Hive Solutions Lda."
 """ The copyright for the module """
 
 __license__ = "Apache License, Version 2.0"
@@ -38,25 +29,19 @@ import os
 import setuptools
 
 setuptools.setup(
-    name = "docker-api",
-    version = "0.1.3",
-    author = "Hive Solutions Lda.",
-    author_email = "development@hive.pt",
-    description = "Docker API Client",
-    license = "Apache License, Version 2.0",
-    keywords = "docker api",
-    url = "http://docker-api.hive.pt",
-    zip_safe = False,
-    packages = [
-        "docker"
-    ],
-    package_dir = {
-        "" : os.path.normpath("src")
-    },
-    install_requires = [
-        "appier"
-    ],
-    classifiers = [
+    name="docker-api",
+    version="0.1.3",
+    author="Hive Solutions Lda.",
+    author_email="development@hive.pt",
+    description="Docker API Client",
+    license="Apache License, Version 2.0",
+    keywords="docker api",
+    url="http://docker-api.hive.pt",
+    zip_safe=False,
+    packages=["docker"],
+    package_dir={"": os.path.normpath("src")},
+    install_requires=["appier"],
+    classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
         "License :: OSI Approved :: Apache Software License",
@@ -71,8 +56,10 @@ setuptools.setup(
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7"
+        "Programming Language :: Python :: 3.7",
     ],
-    long_description = open(os.path.join(os.path.dirname(__file__), "README.md"), "rb").read().decode("utf-8"),
-    long_description_content_type = "text/markdown"
+    long_description=open(os.path.join(os.path.dirname(__file__), "README.md"), "rb")
+    .read()
+    .decode("utf-8"),
+    long_description_content_type="text/markdown",
 )

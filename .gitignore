@@ -5,6 +5,8 @@ session.shelve*
 
 .DS_Store
 
+/.venv
+
 /dist
 /build
 /src/docker_api.egg-info

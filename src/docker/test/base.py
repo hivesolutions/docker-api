@@ -19,45 +19,19 @@
 # You should have received a copy of the Apache License along with
 # Hive Docker API. If not, see <http://www.apache.org/licenses/>.
 
+__author__ = "João Magalhães <joamag@hive.pt>"
+""" The author(s) of the module """
+
 __copyright__ = "Copyright (c) 2008-2025 Hive Solutions Lda."
 """ The copyright for the module """
 
 __license__ = "Apache License, Version 2.0"
 """ The license for the module """
 
-import appier
-
-from . import base
+import unittest
 
 
-class DockerApp(appier.WebApp):
+class BaseTest(unittest.TestCase):
 
-    def __init__(self, *args, **kwargs):
-        appier.WebApp.__init__(self, name="docker", *args, **kwargs)
-
-    @appier.route("/", "GET")
-    def index(self):
-        return self.containers()
-
-    @appier.route("/containers", "GET")
-    def containers(self):
-        api = self.get_api()
-        containers = api.list_containers()
-        return containers
-
-    @appier.route("/containers/<str:id>/restart", ("GET", "POST"))
-    def restart_container(self, id):
-        api = self.get_api()
-        container = api.restart_container(id)
-        return container
-
-    def get_api(self):
-        api = base.get_api()
-        return api
-
-
-if __name__ == "__main__":
-    app = DockerApp()
-    app.serve()
-else:
-    __path__ = []
+    def test_basic(self):
+        self.assertEqual(1 + 1, 2)
