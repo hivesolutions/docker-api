@@ -39,6 +39,7 @@ setuptools.setup(
     url="http://docker-api.hive.pt",
     zip_safe=False,
     packages=["docker"],
+    test_suite="docker.test",
     package_dir={"": os.path.normpath("src")},
     install_requires=["appier"],
     classifiers=[
